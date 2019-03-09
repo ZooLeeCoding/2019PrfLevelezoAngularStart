@@ -1,0 +1,9 @@
+<div style="text-align:center">
+  <input type="text" id="cim" [(ngModel)]="title">
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul *ngIf="title !== 'help'">
+  <li *ngFor="let gyumolcs of myArray">
+    <h2 (click)="buyFruit(gyumolcs)">{{gyumolcs}}</h2>
+  </li>
+</ul>
