@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-my-basic';
-  myArray = ["alma", "narancs", "korte"];
-
-  buyFruit(fruit: String) {
-    console.log("Vettem egy " + fruit + "-t");
-  }
 }
