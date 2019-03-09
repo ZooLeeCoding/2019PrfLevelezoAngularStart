@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-fruit',
@@ -8,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class FruitComponent implements OnInit {
 
   title: String;
-  myArray: String[]; 
+  myArray: String[];
+  user: String; 
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+    private router: Router) { 
+      this.user = localStorage.getItem('user');
+      if(!this.user || this.user.length <= 0) {
+        this.router.navigate(["/login"]);
+      }
+      console.log(this.user);
+    }
 
   ngOnInit() {
     this.title = "";

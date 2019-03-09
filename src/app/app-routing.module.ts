@@ -6,7 +6,10 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: 'fruit', component: FruitComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+
+  // a wildcard mindig legyen utolso
+  {path: '**', component: LoginComponent}
 ];
 
 @NgModule({
